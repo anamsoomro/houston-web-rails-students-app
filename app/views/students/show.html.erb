@@ -1,0 +1,34 @@
+<h1><%= @student.name %></h1>
+
+<label>Instructor: </label>
+<label> <%= link_to @student.instructor.name, instructor_path(@student.instructor) %></label>
+<br>
+
+<label>Study: </label>
+<label> <%= @student.major%></label>
+<br>
+<label>Major: </label>
+<label> <%= @student.age %></label>
+<br>
+<br>
+
+
+<%= form_for @student, method: "delete" do |f| %>
+  <%= f.submit "Delete Student" %>
+<% end %>
+
+<button>
+<%= link_to 'Edit Student', edit_student_path(@student) %>
+</button>
+<br>
+<button>
+<%= link_to 'All Instructors', instructors_path %>
+</button>
+<br>
+<button>
+<%= link_to 'All Students', students_path %>
+</button>
+<br>
+
+
+

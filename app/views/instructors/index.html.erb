@@ -1,0 +1,10 @@
+<h1>All Instructors: </h1>
+
+<% @instructors.each do |instructor| %>
+  <ul><li><%= link_to instructor.name, instructor_path(instructor) %></li></ul>
+<% end %>
+
+
+<button>
+<%= link_to 'All Students', students_path %>
+</button>
